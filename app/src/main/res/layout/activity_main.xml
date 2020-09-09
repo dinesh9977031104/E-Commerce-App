@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="#f2f3f4"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    tools:context=".home.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true">
+        <com.tekitsolutions.e_commerce_app.home.StickyScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="56dp"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/toolbar" />
+                <!-- ********SEARCH********* -->
+                <LinearLayout
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbar"
+                    android:background="#3d4652"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:elevation="5dp"
+                        android:tag="sticky"
+                        custom:cardCornerRadius="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/searchbg">
+
+
+                            <com.tekitsolutions.e_commerce_app.home.MyEditText
+                                android:id="@+id/searchtext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/searchbg"
+                                android:drawableLeft="@drawable/ic_search_black_24dp"
+                                android:drawablePadding="4dp"
+                                android:elevation="5dp"
+                                android:hint="Find Beast Deal"
+                                android:lines="1"
+                                android:padding="10dp"
+                                android:tag="sticky"
+                                android:textColorHint="@color/textSub"
+                                android:textSize="@dimen/text" />
+                        </RelativeLayout>
+                        />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <!-- ********SLIDER********** -->
+
+                <RelativeLayout
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_below="@+id/search"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/photos_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="12dp"
+                        app:tabBackground="@drawable/tab_selector"
+                        app:tabGravity="center"
+                        app:tabIndicatorHeight="0dp" />
+
+                </RelativeLayout>
+
+                <!-- *********CATEGORIES*********** -->
+                <com.tekitsolutions.e_commerce_app.home.MyTextView
+                    android:id="@+id/tv_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/slider"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Categories"
+                    android:textColor="@color/Tex"
+                    android:textSize="16dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_category"
+                    app:cardCornerRadius="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_category"
+                        android:elevation="5dp"/>
+                </androidx.cardview.widget.CardView>
+
+
+
+                <com.tekitsolutions.e_commerce_app.home.MyTextView
+                    android:id="@+id/groomingproducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/categories"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="21dp"
+                    android:text="Grooming Products"
+                    android:textColor="@color/Tex"
+                    android:textSize="16dp" />
+                <!-- ********RECYCLERVIEW 1************ -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/groomingproducts"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp" />
+
+
+                <com.tekitsolutions.e_commerce_app.home.MyTextView
+                    android:id="@+id/trendingproducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="21dp"
+                    android:text="Tranding Products"
+                    android:textColor="@color/Tex"
+                    android:textSize="16dp" />
+                <!-- ********RECYCLERVIEW 2************ -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/trendingproducts"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp" />
+
+                <com.tekitsolutions.e_commerce_app.home.MyTextView
+                    android:id="@+id/topbrands"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv2"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="21dp"
+                    android:text="Top Brands"
+                    android:textColor="@color/Tex"
+                    android:textSize="16dp" />
+                <!-- ********RECYCLERVIEW 3************ -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/topbrands"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp" />
+            </RelativeLayout>
+        </com.tekitsolutions.e_commerce_app.home.StickyScrollView>
+        <!-- *****BOTBAR*************** -->
+        <LinearLayout
+            android:id="@+id/botbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="#fff"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/home0"
+                style="@style/bottom_bar_linear_layout_style">
+
+                <ImageView
+                    android:id="@+id/home"
+                    style="@style/bottom_bar_image_style"
+                    android:src="@drawable/homewhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/offer0"
+                style="@style/bottom_bar_linear_layout_style">
+
+                <ImageView
+                    android:id="@+id/offer"
+                    style="@style/bottom_bar_image_style"
+                    android:src="@drawable/salewhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fav0"
+                style="@style/bottom_bar_linear_layout_style">
+
+                <ImageView
+                    android:id="@+id/fav"
+                    style="@style/bottom_bar_image_style"
+                    android:src="@drawable/heartwhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bag0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <com.tekitsolutions.e_commerce_app.home.MyTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/bagnumberbg"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/White"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/bag"
+                        style="@style/bottom_bar_image_style"
+                        android:src="@drawable/bagwhite2" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/noti0"
+                style="@style/bottom_bar_linear_layout_style">
+
+                <ImageView
+                    android:id="@+id/noti"
+                    style="@style/bottom_bar_image_style"
+                    android:src="@drawable/noti" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/row_navigation_header"
+        app:menu="@menu/drawer_menu">
+
+        <!-- app:itemIconTint="@color/colorPrimary"-->
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

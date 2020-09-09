@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">E-Commerce-App</string>
+
+    <string name="signup">
+        <b><u>Sign up Now</u></b>
+    </string>
+
+    <string name="signin">
+        <u><b>Sign in</b></u>
+    </string>
+
+    <string name="tandc">
+        <u>terms and conditions</u>
+    </string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_sale">Sale</string>
+    <string name="nav_wish_list">Wish List</string>
+    <string name="nav_cart">Cart</string>
+    <string name="nav_order">Order</string>
+    <string name="nav_notification">Notification</string>
+    <string name="nav_setting">Settings</string>
+    <string name="nav_share">Share</string>
+    <string name="nav_feedback">Feedback</string>
+    <string name="nav_about_us">About us</string>
+    <string name="nav_logout">Logout</string>
+
+
+    <string name="sequrity">Sequrity</string>
+    <string name="general">General</string>
+    <string name="others">Others</string>
+
+
+</resources>

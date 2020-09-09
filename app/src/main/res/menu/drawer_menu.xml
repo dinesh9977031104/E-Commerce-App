@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/nav_home" />
+
+        <item
+            android:id="@+id/nav_sale"
+            android:icon="@drawable/sale1"
+            android:title="@string/nav_sale" />
+
+        <item
+            android:id="@+id/nav_wish_list"
+            android:icon="@drawable/ic_favorite_border_black_24dp"
+            android:title="@string/nav_wish_list" />
+
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="@string/nav_cart" />
+
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            android:title="@string/nav_notification" />
+
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:title="@string/nav_order" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/nav_setting" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_group_black_24dp"
+            android:title="@string/nav_about_us" />
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share_black_24dp"
+            android:title="@string/nav_share" />
+
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_feedback_black_24dp"
+            android:title="@string/nav_feedback" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="@string/nav_logout" />
+
+    </group>
+
+   <!-- <group android:checkableBehavior="none">
+        <item android:title="@string/sequrity">
+            <menu>
+                <item
+                    android:id="@+id/nav_settings"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    android:title="@string/nav_setting" />
+
+                <item
+                    android:id="@+id/nav_change_password"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    android:title="@string/nav_change_password" />
+
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="none">
+        <item android:title="@string/general">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_donation_facts"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    android:title="@string/nav_donation_fact" />
+
+                <item
+                    android:id="@+id/nav_govt_bloodbank"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    android:title="@string/nav_govt_bloodbank" />
+
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    android:title="@string/nav_share" />
+                <item
+                    android:id="@+id/nav_feedback"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    android:title="@string/nav_feedback" />
+
+                <item
+                    android:id="@+id/nav_rating_app"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    android:title="@string/nav_rat_app" />
+
+                <item
+                    android:id="@+id/nav_about_us"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    android:title="@string/nav_about_us" />
+
+            </menu>
+        </item>
+    </group>
+
+
+    <group android:checkableBehavior="none">
+        <item android:title="@string/others">
+            <menu>
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    android:title="@string/nav_logout" />
+
+
+            </menu>
+        </item>
+    </group>-->
+
+
+</menu>

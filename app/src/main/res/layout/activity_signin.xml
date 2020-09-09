@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".signinsignup.SigninActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/e_commerce" />
+
+        <com.tekitsolutions.e_commerce_app.signinsignup.MyTextView
+            style="@style/hint_textview_style"
+            android:text="E-mail" />
+
+        <com.tekitsolutions.e_commerce_app.signinsignup.MyEditText
+            android:id="@+id/et_user_id"
+            style="@style/edit_text_style"
+            android:imeOptions="actionNext"
+            android:maxLength="15"
+            android:singleLine="true" />
+
+
+        <com.tekitsolutions.e_commerce_app.signinsignup.MyTextView
+            style="@style/hint_textview_style"
+            android:text="Password" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.tekitsolutions.e_commerce_app.signinsignup.MyEditText
+                android:id="@+id/et_password"
+                style="@style/edit_text_style"
+                android:inputType="textPassword"
+                android:imeOptions="actionDone" />
+
+            <ImageView
+                android:id="@+id/iv_view_password"
+                style="@style/view_password_imageview_style" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbocremember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/textSub"
+                    android:checked="false" />
+
+                <com.tekitsolutions.e_commerce_app.signinsignup.MyTextView
+                    android:id="@+id/remember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Remember password?"
+                    android:textColor="@color/textSub"
+                    android:textSize="@dimen/textsub" />
+            </LinearLayout>
+
+            <com.tekitsolutions.e_commerce_app.signinsignup.MyTextView
+                android:id="@+id/forgotpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:text="Forgot password?"
+                android:textColor="@color/textSub"
+                android:textSize="@dimen/textsub" />
+        </LinearLayout>
+
+        <com.tekitsolutions.e_commerce_app.signinsignup.MyTextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/signinline"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="26dp"
+            android:background="@drawable/rect1"
+            android:elevation="1.5dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Sign in"
+            android:textColor="#fff"
+            android:textSize="@dimen/text" />
+
+
+        <LinearLayout
+            android:id="@+id/signinline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.tekitsolutions.e_commerce_app.signinsignup.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="3dp"
+                android:gravity="center"
+                android:text="Not a Member?"
+                android:textColor="@color/textSub"
+                android:textSize="@dimen/textsub" />
+
+            <com.tekitsolutions.e_commerce_app.signinsignup.MyTextView
+                android:id="@+id/tv_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="3dp"
+                android:gravity="center"
+                android:text="@string/signup"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsub" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.tekitsolutions.e_commerce_app.signinsignup.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Sign in with"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/facebook" />
+
+                    <com.tekitsolutions.e_commerce_app.signinsignup.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center"
+                        android:text="facebook"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/google" />
+
+                    <com.tekitsolutions.e_commerce_app.signinsignup.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center"
+                        android:text="google"
+                        android:textColor="@color/red"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

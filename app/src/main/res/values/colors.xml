@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="global_color_primary_light">#f5f5f5</color>
+    <color name="global_color_green_primary">#4caf50</color>
+    <color name="global_color_green_primary_light">#c8e6c9</color>
+    <color name="global_color_green_primary_dark">#388e3c</color>
+    <color name="global_color_green_accent">#ffc107</color>
+    <color name="global_color_green_control_activated">#ffc107</color>
+    <color name="red">#ea495f</color>
+    <color name="black">#000000</color>
+
+    <color name="lightGray">#D3D3D3</color>
+
+    <color name="toolbarColor">#3d4652</color>
+
+    <color name="colorGray">#404547</color>
+
+    <color name="textSub">#76818a</color>
+    <color name="Tex">#404547</color>
+    <color name="White">#fff</color>
+    <color name="colordevider">#f1f2f4</color>
+    <color name="colorbutton">#ff5254</color>
+    <color name="iconcolour">#9ba4ab</color>
+    <color name="strok">#e4e5ea</color>
+    <color name="green">#5ccc78</color>
+    <color name="yellow">#f8d64e</color>
+    <color name="light_green">#1bac94</color>
+    <color name="colortext">#100b20</color>
+    <color name="colorhint">#a9aaac</color>
+
+
+    <color name="colorVerySoftRed">#F98dA5</color>
+    <color name="colorVerySoftCyan">#8Cf9Eb</color>
+    <color name="colorVerySoftBlue">#93C6FD</color>
+    <color name="colorVerySoftViolet">#E4B5FC</color>
+    <color name="ColorModerateRed">#D1395C</color>
+    <color name="colorStrongBlue">#2CA6CF</color>
+    <color name="colorDarkCyan">#14A895</color>
+    <color name="colorModerateViolet">#A854D4</color>
+
+    <array name="array_dot_active">
+        <item>@color/colorVerySoftRed</item>
+        <item>@color/colorVerySoftCyan</item>
+        <item>@color/colorVerySoftBlue</item>
+        <item>@color/colorVerySoftViolet</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/ColorModerateRed</item>
+        <item>@color/colorDarkCyan</item>
+        <item>@color/colorStrongBlue</item>
+        <item>@color/colorModerateViolet</item>
+    </array>
+
+
+    <color name="iconcolor">#8b959e</color>
+    <color name="boticon">#999ba4ab</color>
+    <color name="boticoncolor">#24bdb6</color>
+
+</resources>

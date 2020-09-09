@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="4dp"
+    android:gravity="center">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/circle_bg_category"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/iv_catagory"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/ic_exit_to_app_black_24dp"
+        android:padding="8dp"/>
+</LinearLayout>
+
+    <com.tekitsolutions.e_commerce_app.home.MyTextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="category"
+        android:padding="4dp"/>
+
+</LinearLayout>
