@@ -18,15 +18,13 @@
     app:contentInsetStart="10dp">
 
 
-    <!--<ImageView
-
+    <ImageView
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_gravity="left"
-        android:padding="8dp"
-        android:src="@drawable/menu2"
-
-        />-->
+        android:layout_gravity="right"
+        android:padding="4dp"
+        android:src="@drawable/my_cart"
+        />
 
 
     <com.tekitsolutions.e_commerce_app.home.MyTextView

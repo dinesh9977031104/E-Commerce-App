@@ -61,7 +61,7 @@ public class TrendingRecyclerViewAdapter extends RecyclerView
             image = (ImageView) itemView.findViewById(R.id.image);
             title = (TextView) itemView.findViewById(R.id.title);
             price = (TextView) itemView.findViewById(R.id.price);
-            cutprice = (TextView) itemView.findViewById(R.id.cutprice);
+            cutprice = (TextView) itemView.findViewById(R.id.tv_full_price);
             discount = (TextView) itemView.findViewById(R.id.discount);
             ratingtex = (TextView) itemView.findViewById(R.id.ratingtext);
 

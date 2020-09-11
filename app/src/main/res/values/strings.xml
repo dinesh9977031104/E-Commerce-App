@@ -33,5 +33,7 @@
     <string name="general">General</string>
     <string name="others">Others</string>
 
-
+    <string name="code">
+        <u>code</u>
+   </string>
 </resources>

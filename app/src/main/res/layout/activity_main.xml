@@ -233,7 +233,7 @@
                     android:src="@drawable/heartwhite" />
             </LinearLayout>
 
-            <LinearLayout
+            <!--<LinearLayout
                 android:id="@+id/bag0"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -263,7 +263,7 @@
                         style="@style/bottom_bar_image_style"
                         android:src="@drawable/bagwhite2" />
                 </FrameLayout>
-            </LinearLayout>
+            </LinearLayout>-->
 
             <LinearLayout
                 android:id="@+id/noti0"

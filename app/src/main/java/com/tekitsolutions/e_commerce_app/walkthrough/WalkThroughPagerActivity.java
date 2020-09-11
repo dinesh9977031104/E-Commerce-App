@@ -35,7 +35,7 @@ public class WalkThroughPagerActivity extends AppCompatActivity {
     Button btnSkip;
 
     private PreferenceManager prefManager;
-    private int[] layouts = new int[]{R.layout.walkthrough_1, R.layout.walkthrough_2, R.layout.walkthrough_3, R.layout.walkthrough_1};
+    private int[] layouts = new int[]{R.layout.walkthrough_1, R.layout.walkthrough_2, R.layout.walkthrough_3, R.layout.walkthrough_4};
     private ViewPager.OnPageChangeListener viewPagerPageChangeListener;
 
 

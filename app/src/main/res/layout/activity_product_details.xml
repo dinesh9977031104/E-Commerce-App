@@ -1,0 +1,725 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f3f4"
+    tools:context=".productdetails.ProductDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_product_details" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- *********product name********* -->
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:id="@+id/tv_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:lines="2"
+                        android:text="T-shirt"
+                        android:textColor="@color/Tex"
+                        android:textSize="20dp"
+                        android:textStyle="bold|italic"/>
+                </LinearLayout>
+
+                <!-- <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2.6"
+                     android:gravity="right"
+                     android:orientation="vertical">
+
+
+
+                         <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                             android:id="@+id/discount"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:padding="2dp"
+                             android:text="30%"
+                             android:background="@drawable/discountbg"
+                             android:textColor="#fff"
+                             android:textSize="12dp" />
+
+                     <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                         android:id="@+id/tv_price"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/oneside_roundrect"
+                         android:paddingLeft="10dp"
+                         android:paddingTop="6dp"
+                         android:paddingRight="10dp"
+                         android:paddingBottom="6dp"
+                         android:text="15,000 Rs"
+                         android:textColor="@color/White"
+                         android:textSize="16dp" />
+
+                     <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                         android:id="@+id/tv_full_price"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="left"
+                         android:layout_marginLeft="16dp"
+                         android:layout_marginTop="6dp"
+                         android:text="17,000 Rs"
+                         android:textColor="@color/textSub"
+                         android:textSize="@dimen/textsub" />
+                 </LinearLayout>-->
+            </LinearLayout>
+            <!-- *********image********* -->
+
+            <LinearLayout
+                android:id="@+id/lr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/linear1"
+                    android:background="@color/White"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_produce"
+                        android:layout_width="160dp"
+                        android:layout_height="140dp"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:background="@color/White">
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:padding="10dp"
+                        android:text="15,000 Rs"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="16dp" />
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:id="@+id/tv_full_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center"
+                        android:text="17,000 Rs"
+                        android:textColor="@color/textSub"
+                        android:textSize="@dimen/textsub" />
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:id="@+id/discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/discountbg"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:layout_marginLeft="16dp"
+                        android:text="30%"
+                        android:textColor="#fff"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- *****review, rate, add to cart  ************* -->
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lr"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_strok"
+                android:orientation="vertical">
+                <!-- *****review, rate************* -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/White"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RatingBar
+                            android:id="@+id/ratingbar"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="false"
+                            android:rating="4" />
+
+                        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                            android:id="@+id/tv_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="(1230)"
+                            android:textColor="@color/textSub"
+                            android:textSize="@dimen/textsub" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colordevider" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reviews"
+                            android:textColor="@color/light_green"
+                            android:textSize="@dimen/textsub" />
+
+                        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="(130)"
+                            android:textColor="@color/textSub"
+                            android:textSize="@dimen/textsub" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colordevider" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="In Stock"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/textsub" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- ********add to cart********** -->
+                <LinearLayout
+                    android:id="@+id/linear3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/White"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quantity "
+                            android:textColor="@color/textSub"
+                            android:textSize="@dimen/textsub" />
+
+                        <ImageView
+                            android:id="@+id/plus"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="16dp"
+                            android:padding="2dp"
+                            android:src="@drawable/plus" />
+
+                        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                            android:id="@+id/cartno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:background="#00000000"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textColor="@color/textSub"
+                            android:textColorHint="@color/textSub"
+                            android:textSize="@dimen/textsub" />
+
+                        <ImageView
+                            android:id="@+id/minus"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="16dp"
+                            android:padding="2dp"
+                            android:src="@drawable/minus" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:background="@color/colordevider" />
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="22dp"
+                        android:gravity="center"
+                        android:text="Verified by Shop"
+                        android:textColor="@color/light_green"
+                        android:textSize="@dimen/textsub" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="16dp">
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Size"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:orientation="horizontal">
+
+                            <ToggleButton
+                                android:id="@+id/toggle_1"
+                                style="@style/toggle_button_style"
+                                android:textOff="6"
+                                android:textOn="6" />
+
+                            <ToggleButton
+                                android:id="@+id/toggle_2"
+                                style="@style/toggle_button_style"
+                                android:textOff="7"
+                                android:textOn="7" />
+                            <ToggleButton
+                                android:id="@+id/toggle_3"
+                                style="@style/toggle_button_style"
+                                android:textOff="8"
+                                android:textOn="8" />
+                            <ToggleButton
+                                android:id="@+id/toggle_4"
+                                style="@style/toggle_button_style"
+                                android:textOff="9"
+                                android:textOn="9" />
+                            <ToggleButton
+                                android:id="@+id/toggle_5"
+                                style="@style/toggle_button_style"
+                                android:textOff="10"
+                                android:textOn="10" />
+                            <ToggleButton
+                                android:id="@+id/toggle_6"
+                                style="@style/toggle_button_style"
+                                android:textOff="11"
+                                android:textOn="11" />
+                            <ToggleButton
+                                android:id="@+id/toggle_7"
+                                style="@style/toggle_button_style"
+                                android:textOff="12"
+                                android:textOn="12" />
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear2"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_strok"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/guard"
+                        android:tint="@color/green" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="0.07"
+                    android:orientation="vertical">
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Shop Guarantee"
+                        android:textColor="@color/Tex"
+                        android:textSize="@dimen/text" />
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="100% Payment Protection. 7days easy return in case item is defective or damaged or different from what was described."
+                        android:textColor="@color/textSub"
+                        android:textSize="@dimen/textsub" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- ************Location************** -->
+            <LinearLayout
+                android:id="@+id/linear5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear4"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_strok"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/locationpin" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="0.07"
+                    android:orientation="vertical">
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Specify pincode to find delivery at your location"
+                        android:textColor="@color/Tex"
+                        android:textSize="@dimen/text" />
+                    <!-- *******pincode********* -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pincode :"
+                            android:textColor="@color/textSub"
+                            android:textSize="@dimen/textsub" />
+
+                        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                            android:id="@+id/changeno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:text="@string/code"
+                            android:textColor="@color/textSub"
+                            android:textSize="@dimen/textsub" />
+
+                        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                            android:id="@+id/change"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/changebg"
+                            android:gravity="center"
+                            android:paddingLeft="7dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="4dp"
+                            android:text="Change"
+                            android:textColor="@color/White"
+                            android:textSize="@dimen/textsub" />
+                    </LinearLayout>
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawableLeft="@drawable/checked"
+                        android:drawablePadding="16dp"
+                        android:text="Item is available on this pincode"
+                        android:textColor="@color/textSub"
+                        android:textSize="@dimen/textsub" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal">
+
+                        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/checked"
+                            android:drawablePadding="16dp"
+                            android:text="Delivered in 2 -4 days"
+                            android:textColor="@color/textSub"
+                            android:textSize="@dimen/textsub" />
+
+                        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="+ 30 Rs"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/textsub" />
+                    </LinearLayout>
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:drawableLeft="@drawable/checked"
+                        android:drawablePadding="16dp"
+                        android:text="Cash On Delivery available"
+                        android:textColor="@color/textSub"
+                        android:textSize="@dimen/textsub" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- ************Item details************** -->
+            <LinearLayout
+                android:id="@+id/linear6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear5"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="26dp"
+                android:background="@drawable/bg_strok"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.07"
+                    android:orientation="vertical">
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Item Details"
+                        android:textColor="@color/Tex"
+                        android:textSize="@dimen/text" />
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="6dp"
+                        android:text="- Fabric: Cotton Blend"
+                        android:textColor="@color/textSub"
+                        android:textSize="@dimen/textsub" />
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:drawablePadding="6dp"
+                        android:text="- Regular Fit Round Neck T-shirt"
+                        android:textColor="@color/textSub"
+                        android:textSize="@dimen/textsub" />
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:drawablePadding="6dp"
+                        android:text="- Pattern: Printed"
+                        android:textColor="@color/textSub"
+                        android:textSize="@dimen/textsub" />
+
+                    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:drawablePadding="6dp"
+                        android:text="- Half Sleeve"
+                        android:textColor="@color/textSub"
+                        android:textSize="@dimen/textsub" />
+
+                    <LinearLayout
+                        android:id="@+id/save"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear3"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/view_more_bg"
+                            android:gravity="center"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="6dp"
+                            android:paddingRight="15dp"
+                            android:paddingBottom="6dp"
+                            android:text="View More"
+                            android:textColor="@color/White"
+                            android:textSize="@dimen/textsub" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--similar product comment by dinesh-->
+            <!--<com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+                android:id="@+id/peopviewed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear6"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="21dp"
+                android:text="Grooming Products"
+                android:textColor="@color/Tex"
+                android:textSize="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/peopviewed"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="25dp"
+                android:elevation="5dp" />-->
+
+            <!-- <View
+                 android:id="@+id/div9"
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:layout_below="@+id/rv2"
+                 android:layout_marginTop="36dp"
+                 android:background="@color/strok" />-->
+        </RelativeLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/div0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/strok" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="2"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:paddingLeft="14dp"
+            android:paddingTop="16dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="16dp"
+            android:text="ADD TO CART"
+            android:textColor="@color/White"
+            android:textSize="16dp" />
+
+
+        <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:paddingLeft="14dp"
+            android:paddingTop="16dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="16dp"
+            android:text="SHOP NOW"
+            android:textColor="@color/White"
+            android:textSize="16dp" />
+    </LinearLayout>
+</RelativeLayout>

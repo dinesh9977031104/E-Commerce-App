@@ -1,30 +1,33 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="@drawable/walkthrough3"
     >
 
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@drawable/bg3"
+       android:layout_marginBottom="50dp">
+
+      <ImageView
+          android:id="@+id/iv"
+          style="@style/walkthrough_image_style"
+          android:src="@drawable/walk3"/>
+
+      <com.tekitsolutions.e_commerce_app.walkthrough.MyTextView
+          android:id="@+id/tv"
+          style="@style/walkthrough_textview_style"
+          android:layout_below="@+id/iv" />
 
 
-   <!-- <LinearLayout
-        android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true">
-    
-    <ImageView
+      <com.tekitsolutions.e_commerce_app.walkthrough.MyTextView
+          style="@style/walkthrough_textview_style_small"
+          android:layout_below="@+id/tv"
+          android:text="Easy to payment option and case on delivery options"/>
+   </RelativeLayout>
 
-        android:layout_width="26dp"
-        android:layout_height="26dp"
-        android:src="@drawable/nextlist"
 
-        />
-
-    </LinearLayout>-->
 
 </RelativeLayout>

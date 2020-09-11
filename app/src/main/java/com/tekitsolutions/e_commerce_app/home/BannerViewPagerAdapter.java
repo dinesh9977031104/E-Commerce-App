@@ -10,28 +10,25 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.tekitsolutions.e_commerce_app.R;
 
-public class CustomAdapter extends PagerAdapter {
+public class BannerViewPagerAdapter extends PagerAdapter {
 
     private Activity activity;
     private Integer[] imagesArray;
-    //private String[] namesArray;
 
-    public CustomAdapter(Activity activity,Integer[] imagesArray){ //,String[] namesArray
+
+    public BannerViewPagerAdapter(Activity activity, Integer[] imagesArray) {
 
         this.activity = activity;
         this.imagesArray = imagesArray;
-       // this.namesArray = namesArray;
+
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
         LayoutInflater inflater = (activity).getLayoutInflater();
-        //creating  xml file for custom viewpager
         View viewItem = inflater.inflate(R.layout.slider_list, container, false);
-        //finding id
-        ImageView imageView =  viewItem.findViewById(R.id.imageView);
-        //setting data
+        ImageView imageView = viewItem.findViewById(R.id.imageView);
         imageView.setBackgroundResource(imagesArray[position]);
 
         container.addView(viewItem);
@@ -41,19 +38,16 @@ public class CustomAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        // TODO Auto-generated method stub
         return imagesArray.length;
     }
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        // TODO Auto-generated method stub
         return view == object;
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        // TODO Auto-generated method stub
         container.removeView((View) object);
     }
 }

@@ -1,0 +1,32 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg3"
+        android:layout_marginBottom="50dp">
+
+        <ImageView
+            android:id="@+id/iv"
+            style="@style/walkthrough_image_style"
+            android:src="@drawable/walk4"/>
+
+        <com.tekitsolutions.e_commerce_app.walkthrough.MyTextView
+            android:id="@+id/tv"
+            style="@style/walkthrough_textview_style"
+            android:layout_below="@+id/iv" />
+
+
+        <com.tekitsolutions.e_commerce_app.walkthrough.MyTextView
+            style="@style/walkthrough_textview_style_small"
+            android:layout_below="@+id/tv"
+            android:text="Enjoy fast delivery service to your door! "/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

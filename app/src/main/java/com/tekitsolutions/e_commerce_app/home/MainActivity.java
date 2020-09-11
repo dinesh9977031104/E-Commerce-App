@@ -2,12 +2,10 @@ package com.tekitsolutions.e_commerce_app.home;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -45,8 +43,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Typeface fonts1, fonts2, fonts3, fonts4;
     TextView eshop,  groomingproducts, trendingproducts, topbrands, categories; //shirt1, jeans1, shoes1, slippers1, goggles1,
     EditText searchtext;
-    LinearLayout home0, offer0, fav0, bag0, noti0;
-    ImageView home, offer, fav, bag, noti;
+    LinearLayout home0, offer0, fav0,  noti0; //bag0,
+    ImageView home, offer, fav,  noti; //bag,
     //banner
     Integer[] imageId = {R.drawable.banner1, R.drawable.banner2, R.drawable.banner3, R.drawable.banner4};
     int currentPage = 0;
@@ -102,11 +100,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         eshop = findViewById(R.id.eshop);
-       /* shirt1 = findViewById(R.id.shirt1);
-        jeans1 = findViewById(R.id.jeans1);
-        shoes1 = findViewById(R.id.shoes1);
-        slippers1 = findViewById(R.id.slippers1);
-        goggles1 = findViewById(R.id.goggles1);*/
        categories = findViewById(R.id.tv_category);
         groomingproducts = findViewById(R.id.groomingproducts);
         trendingproducts = findViewById(R.id.trendingproducts);
@@ -122,8 +115,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         offer0 = findViewById(R.id.offer0);
         fav = findViewById(R.id.fav);
         fav0 = findViewById(R.id.fav0);
-        bag = findViewById(R.id.bag);
-        bag0 = findViewById(R.id.bag0);
+        //bag = findViewById(R.id.bag);
+        //bag0 = findViewById(R.id.bag0);
         noti = findViewById(R.id.noti);
         noti0 = findViewById(R.id.noti0);
 
@@ -131,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         home.setColorFilter(getResources().getColor(R.color.boticon), android.graphics.PorterDuff.Mode.MULTIPLY);
         offer.setColorFilter(getResources().getColor(R.color.boticon), android.graphics.PorterDuff.Mode.MULTIPLY);
         fav.setColorFilter(getResources().getColor(R.color.boticon), android.graphics.PorterDuff.Mode.MULTIPLY);
-        bag.setColorFilter(getResources().getColor(R.color.boticon), android.graphics.PorterDuff.Mode.MULTIPLY);
+       // bag.setColorFilter(getResources().getColor(R.color.boticon), android.graphics.PorterDuff.Mode.MULTIPLY);
         noti.setColorFilter(getResources().getColor(R.color.boticon), android.graphics.PorterDuff.Mode.MULTIPLY);
 
 
@@ -159,14 +152,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             }
         });
-        bag0.setOnClickListener(new View.OnClickListener() {
+       /* bag0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 clickb("4");
 
             }
-        });
+        });*/
         noti0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -267,7 +260,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         ViewPager pager = findViewById(R.id.photos_viewpager);
-        PagerAdapter adapter = new CustomAdapter(MainActivity.this, imageId);
+        PagerAdapter adapter = new BannerViewPagerAdapter(MainActivity.this, imageId);
         pager.setAdapter(adapter);
 
         TabLayout tabLayout = findViewById(R.id.tab_layout);
@@ -415,7 +408,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         home.setColorFilter(getResources().getColor(R.color.boticon), android.graphics.PorterDuff.Mode.MULTIPLY);
         offer.setColorFilter(getResources().getColor(R.color.boticon), android.graphics.PorterDuff.Mode.MULTIPLY);
         fav.setColorFilter(getResources().getColor(R.color.boticon), android.graphics.PorterDuff.Mode.MULTIPLY);
-        bag.setColorFilter(getResources().getColor(R.color.boticon), android.graphics.PorterDuff.Mode.MULTIPLY);
+        //bag.setColorFilter(getResources().getColor(R.color.boticon), android.graphics.PorterDuff.Mode.MULTIPLY);
         noti.setColorFilter(getResources().getColor(R.color.boticon), android.graphics.PorterDuff.Mode.MULTIPLY);
 
 
@@ -431,11 +424,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             fav.setColorFilter(getResources().getColor(R.color.red), android.graphics.PorterDuff.Mode.MULTIPLY);
 
-        } else if (s.equalsIgnoreCase("4")) {
+        } /*else if (s.equalsIgnoreCase("4")) {
 
             bag.setColorFilter(getResources().getColor(R.color.red), android.graphics.PorterDuff.Mode.MULTIPLY);
 
-        } else if (s.equalsIgnoreCase("5")) {
+        }*/ else if (s.equalsIgnoreCase("5")) {
 
             noti.setColorFilter(getResources().getColor(R.color.red), android.graphics.PorterDuff.Mode.MULTIPLY);
 

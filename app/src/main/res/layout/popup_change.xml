@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popupbg"
+    android:padding="16dp">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:gravity="center"-->
+
+    <!--&gt;-->
+
+
+    <com.tekitsolutions.e_commerce_app.productdetails.MyEditText
+
+        android:id="@+id/numberpopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#00000000"
+        android:hint="Pin code"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+        android:textColor="@color/textSub" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="145dp"
+        android:background="#000"
+        />
+
+
+    <!--</LinearLayout>-->
+
+    <com.tekitsolutions.e_commerce_app.productdetails.MyTextView
+        android:id="@+id/button"
+        android:layout_width="90dp"
+        android:layout_height="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/changebg"
+        android:gravity="center"
+        android:text="ok"
+        android:textColor="@color/White"
+        android:textSize="@dimen/text"
+
+        />
+</RelativeLayout>

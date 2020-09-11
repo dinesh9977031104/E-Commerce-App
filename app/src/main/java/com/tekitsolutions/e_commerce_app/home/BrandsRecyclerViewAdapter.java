@@ -154,7 +154,7 @@ public class BrandsRecyclerViewAdapter extends RecyclerView
             image = itemView.findViewById(R.id.image);
             title = itemView.findViewById(R.id.title);
             price = itemView.findViewById(R.id.price);
-            cutprice = itemView.findViewById(R.id.cutprice);
+            cutprice = itemView.findViewById(R.id.tv_full_price);
             discount = itemView.findViewById(R.id.discount);
             ratingtex = itemView.findViewById(R.id.ratingtext);
 

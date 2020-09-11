@@ -14,6 +14,8 @@
 
     <color name="lightGray">#D3D3D3</color>
 
+    <color name="gray">#808080</color>
+
     <color name="toolbarColor">#3d4652</color>
 
     <color name="colorGray">#404547</color>
@@ -59,5 +61,7 @@
     <color name="iconcolor">#8b959e</color>
     <color name="boticon">#999ba4ab</color>
     <color name="boticoncolor">#24bdb6</color>
+
+
 
 </resources>
